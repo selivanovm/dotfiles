@@ -1,0 +1,51 @@
+[ui]
+username = Thomas Pelletier <thomas@pelletier.im>
+ignore = ~/.hgignore
+commitsubrepos = False
+editor = vim
+
+[extensions]
+progress =
+publishall = ~/code/dotfiles/hg/hg-publishall/publishall.py
+prompt = ~/code/dotfiles/hg/hg-prompt/prompt.py
+hggit = ~/code/dotfiles/hg/hg-git/hggit
+hgext.convert =
+hgext.bookmarks =
+hgext.graphlog = 
+hgext.mq = 
+hgext.extdiff =
+color=
+
+[extdiff]
+cmd.ksdiff = /usr/local/bin/ksdiff-wrapper
+opts.ksdiff = hg
+
+[merge-tools]
+threesome.executable = mvim
+threesome.args = -f $base $local $other $output -c 'ThreesomeInit'
+threesome.premerge = keep
+threesome.priority = 1
+
+[hostfingerprints]
+bitbucket.org = 24:9c:45:8b:9c:aa:ba:55:4e:01:6d:58:ff:e4:28:7d:2a:14:ae:3b
+
+[color]
+status.modified = cyan
+status.added = green
+status.removed = red
+status.deleted = yellow bold underline
+status.unknown = magenta bold underline
+status.ignored = black bold
+diff.diffline = none
+diff.extended = cyan
+diff.file_a = red
+diff.file_b = green
+diff.hunk = yellow bold
+diff.deleted = red
+diff.inserted = green
+diff.changed = white
+diff.trailingwhitespace = white_background
+
+[alias]
+
+wtf = summary

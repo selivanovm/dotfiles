@@ -1,0 +1,40 @@
+# xcode noise
+build/*
+*.pbxuser
+*.mode1v3
+
+# osx noise
+.DS_Store
+
+.sass-cache
+
+# misc
+*.sassc
+*.pyc
+*.dump
+*~
+*.beam
+*.sqlite3
+*.tmp
+.DS_Store
+*.orig
+*.old
+*._*
+\#*
+_build
+databuild
+*.sw*
+*.egg*
+build
+*.kpf
+.netrwhist
+.fabrc
+.#*
+
+# wo
+.wo.conf
+
+placeholder.zsh
+.rvmrc
+
+.noseids

@@ -1,0 +1,28 @@
+[core]
+    excludesfile = ~/.gitignore
+    editor = vim
+
+[user]
+    name = Thomas Pelletier
+    email = pelletier.thomas@gmail.com
+
+[github]
+    name = pelletier
+    token = bed6f48bac3881f4cb179e4a17357b7b
+    user = pelletier
+
+[difftool]
+    prompt = false
+
+[color]
+    ui = true
+
+[merge]
+tool = threesome
+
+[mergetool "threesome"]
+cmd = "mvim -f $BASE $LOCAL $REMOTE $MERGED -c 'ThreesomeInit'"
+trustExitCode = true
+
+[alias]
+l = log -16 --color=always --all --topo-order --pretty='format:%Cgreen%h%Creset %s%Cred%d%Creset %C(black bold)(by %an)%Creset'

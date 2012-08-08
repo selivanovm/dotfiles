@@ -1,0 +1,50 @@
+[general]
+ui = TTY.TTYUI
+accounts = GMail, Pelletier, Cloudy
+pythonfile=~/.mutt/offlineimap.py
+maxsyncaccounts = 3
+
+[Account GMail]
+localrepository = Gmail-Local
+remoterepository = Gmail-Remote
+
+[Account Pelletier]
+localrepository = Pelletier-Local
+remoterepository = Pelletier-Remote
+
+[Account Cloudy]
+localrepository = Cloudy-Local
+remoterepository = Cloudy-Remote
+
+[Repository Gmail-Local]
+type = Maildir
+localfolders = ~/Mail/GMail
+
+[Repository Pelletier-Local]
+type = Maildir
+localfolders = ~/Mail/Pelletier
+
+[Repository Cloudy-Local]
+type = Maildir
+localfolders = ~/Mail/Cloudy
+
+[Repository Gmail-Remote]
+type = Gmail
+remoteuser = pelletier.thomas@gmail.com
+remotepasseval = get_keychain_pass(account="pelletier.thomas@gmail.com", server="imap.gmail.com")
+realdelete = no
+nametrans = lambda folder: re.sub('.*Spam$', 'spam', re.sub('.*Drafts$', 'drafts', re.sub('.*Sent Mail$', 'sent', re.sub('.*Starred$', 'flagged', re.sub('.*Trash$', 'trash', re.sub('.*All Mail$', 'archive', folder))))))
+
+[Repository Pelletier-Remote]
+type = Gmail
+remoteuser = thomas@pelletier.im
+remotepasseval = get_keychain_pass(account="thomas@pelletier.im", server="imap.gmail.com")
+realdelete = no
+nametrans = lambda folder: re.sub('.*Spam$', 'spam', re.sub('.*Drafts$', 'drafts', re.sub('.*Sent Mail$', 'sent', re.sub('.*Starred$', 'flagged', re.sub('.*Trash$', 'trash', re.sub('.*All Mail$', 'archive', folder))))))
+
+[Repository Cloudy-Remote]
+type = Gmail
+remoteuser = thomas.pelletier@cloudy.fr
+remotepasseval = get_keychain_pass(account="thomas.pelletier@cloudy.fr", server="imap.gmail.com")
+realdelete = no
+nametrans = lambda folder: re.sub('.*Spam$', 'spam', re.sub('.*Drafts$', 'drafts', re.sub('.*Sent Mail$', 'sent', re.sub('.*Starred$', 'flagged', re.sub('.*Trash$', 'trash', re.sub('.*All Mail$', 'archive', folder))))))

@@ -1,0 +1,2 @@
+#!/bin/bash
+chromium --memory-model=low --purge-memory-button --disk-cache-dir=/tmp=/cache "$@"

@@ -1,0 +1,3 @@
+#!/bin/bash
+
+synergys -f --config ~/.config/synergy/synergy.conf --debug ERROR

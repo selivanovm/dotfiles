@@ -1,0 +1,47 @@
+xterm*faceName: Menlo for Powerline:pixelsize=13
+xterm*utf8: 2
+xterm*background: black
+xterm*foreground: white
+
+Xft.dpi: 100
+Xft.antialias: true
+Xft.rgba: rgb
+Xft.hinting: true
+Xft.hintstyle: hintslight
+
+URxvt.scrollBar: off
+URxvt*termName:screen-256color
+URxvt.foreground:white
+URxvt.background:black
+
+URxvt*font:                 xft:Menlo for Powerline:regular:size=10
+URxvt*imFont:               xft:Menlo for Powerline:regular:size=10
+URxvt*boldFont:             xft:Menlo for Powerline:bold:size=10
+URxvt*italicFont:           xft:Menlo for Powerline:italic:size=10
+URxvt*boldItalicFont:       xft:Menlo for Powerline:bold:italic:size=10
+
+! black
+URxvt*color0  : #000000
+URxvt*color8  : #000000
+! red
+URxvt*color1  : #E52222
+URxvt*color9  : #E52222
+! green
+URxvt*color2  : #A6E32D
+URxvt*color10 : #A6E32D
+! yellow
+URxvt*color3  : #FC951E
+URxvt*color11 : #FC951E
+! blue
+URxvt*color4  : #BF8DFF
+URxvt*color12 : #BF8DFF
+! magenta
+URxvt*color5  : #FA250F
+URxvt*color13 : #FA250F
+! cyan
+URxvt*color6  : #67D9F0
+URxvt*color14 : #67D9F0
+! white
+URxvt*color7  : #F2F2F2
+URxvt*color15 : #F2F2F2
+

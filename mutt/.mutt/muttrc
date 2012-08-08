@@ -1,0 +1,89 @@
+# GENERAL SETTINGS {{{
+# I write my emails using macvim.
+set editor = "mvim -f +/^$"
+# Offlineimap creates a Maildir structure.
+set mbox_type = Maildir
+# I set offlineimap to put my mail in ~/Mail. /var/mail/thomas could have been
+# great too (direct integration with the `mail` command).
+set folder = ~/Mail
+# Default mailbox to open.
+set spoolfile = "+Pelletier/INBOX"
+# Mutt, don't check emails. Offlineimap has you covered.
+set mail_check = 0
+unset confirmappend
+# Don't ask me if I'm sure I want to move those emails.
+unset move
+# Same as move, with delete (no, it's not unset).
+set delete
+# When I say quit or exit, just do it please.
+set quit
+# Don't mark "old" messages as "old". The two states "read" and "unread" are
+# enough for me.
+unset mark_old
+# Tell me when I've got a mail.
+set beep_new
+# Headers will appear in Vim when I write a message, so I can edit them if
+# I want to.
+set edit_headers
+# Name to use when sending emails.
+set realname = "Thomas Pelletier"
+# Use the Reply-To: header field instead of the From: field when replying to an
+# email.
+set reply_to
+# Display a tree for each conversation.
+set sort = threads
+# Display the newest email at the top.
+set sort_aux= reverse-last-date-received
+# }}}
+# MAILBOXES CONFIGURATION {{{
+mailboxes GMail
+mailboxes +GMail/INBOX +GMail/archive +GMail/sent +GMail/drafts +GMail/spam +GMail/trash
+mailboxes Pelletier
+mailboxes +Pelletier/INBOX +Pelletier/archive +Pelletier/sent +Pelletier/drafts +Pelletier/spam +Pelletier/trash
+mailboxes Cloudy
+mailboxes +CLoudy/INBOX +CLoudy/archive +CLoudy/sent +CLoudy/drafts +CLoudy/spam +CLoudy/trash
+#folder-hook GMail/* source ~/.mutt/gmail.muttrc
+#folder-hook Pelletier/* source ~/.mutt/pelletier.mutrc
+# }}}
+# COLORS {{{
+color status      cyan          black
+color indicator   black         yellow
+color tree        blue          black
+color error       red           black
+color hdrdefault  black         white
+color header      brightyellow  default  "^(From|Subject):"
+color header      brightcyan    default  ^To:
+color header      brightcyan    default  ^Cc:
+color index       black         red      "~F !~p !~P"
+color index       black         cyan     "~T !~F !~p !~P"
+color body        brightwhite   default  " [;:]-*[})>{(<|]
+color body        blue          default  "( *[-+=#*~_]){6,}"
+color signature   cyan          default
+color quoted      green         default
+color quoted1     yellow        default
+color quoted2     red           default
+color markers     brightred     default
+color sidebar_new yellow        default
+# Note: I haven't written the two following rules. I don't remember where
+# I grabbed those, but I hope they have been automatically generated, because
+# they are quite scary to me.
+color body        brightyellow  default  "([a-z][a-z0-9+-]*://(((([a-z0-9_.!~*'();:&=+$,-]|%[0-9a-f][0-9a-f])*@)?((([a-z0-9]([a-z0-9-]*[a-z0-9])?)\\.)*([a-z]([a-z0-9-]*[a-z0-9])?)\\.?|[0-9]+\\.[0-9]+\\.[0-9]+\\.[0-9]+)(:[0-9]+)?)|([a-z0-9_.!~*'()$,;:@&=+-]|%[0-9a-f][0-9a-f])+)(/([a-z0-9_.!~*'():@&=+$,-]|%[0-9a-f][0-9a-f])*(;([a-z0-9_.!~*'():@&=+$,-]|%[0-9a-f][0-9a-f])*)*(/([a-z0-9_.!~*'():@&=+$,-]|%[0-9a-f][0-9a-f])*(;([a-z0-9_.!~*'():@&=+$,-]|%[0-9a-f][0-9a-f])*)*)*)?(\\?([a-z0-9_.!~*'();/?:@&=+$,-]|%[0-9a-f][0-9a-f])*)?(#([a-z0-9_.!~*'();/?:@&=+$,-]|%[0-9a-f][0-9a-f])*)?|(www|ftp)\\.(([a-z0-9]([a-z0-9-]*[a-z0-9])?)\\.)*([a-z]([a-z0-9-]*[a-z0-9])?)\\.?(:[0-9]+)?(/([-a-z0-9_.!~*'():@&=+$,]|%[0-9a-f][0-9a-f])*(;([-a-z0-9_.!~*'():@&=+$,]|%[0-9a-f][0-9a-f])*)*(/([-a-z0-9_.!~*'():@&=+$,]|%[0-9a-f][0-9a-f])*(;([-a-z0-9_.!~*'():@&=+$,]|%[0-9a-f][0-9a-f])*)*)*)?(\\?([-a-z0-9_.!~*'();/?:@&=+$,]|%[0-9a-f][0-9a-f])*)?(#([-a-z0-9_.!~*'();/?:@&=+$,]|%[0-9a-f][0-9a-f])*)?)[^].,:;!)? \t\r\n<>\"]"
+color body        brightmagenta default  "((@(([0-9a-z-]+\\.)*[0-9a-z-]+\\.?|#[0-9]+|\\[[0-9]?[0-9]?[0-9]\\.[0-9]?[0-9]?[0-9]\\.[0-9]?[0-9]?[0-9]\\.[0-9]?[0-9]?[0-9]\\]),)*@(([0-9a-z-]+\\.)*[0-9a-z-]+\\.?|#[0-9]+|\\[[0-9]?[0-9]?[0-9]\\.[0-9]?[0-9]?[0-9]\\.[0-9]?[0-9]?[0-9]\\.[0-9]?[0-9]?[0-9]\\]):)?[0-9a-z_.+%$-]+@(([0-9a-z-]+\\.)*[0-9a-z-]+\\.?|#[0-9]+|\\[[0-2]?[0-9]?[0-9]\\.[0-2]?[0-9]?[0-9]\\.[0-2]?[0-9]?[0-9]\\.[0-2]?[0-9]?[0-9]\\])"
+# }}}
+
+# SIDEBAR {{{
+set sidebar_width=25
+set sidebar_visible=yes
+set sidebar_delim='|'
+#set sidebar_sort=yes # Not supported anymore?
+# }}}
+# KEYBOARD MAPPING {{{
+# Selection of a mailbox in the index view.
+bind index \CP sidebar-prev
+bind index \CN sidebar-next
+bind index \CO sidebar-open
+# The same in the pager view.
+bind pager \CP sidebar-prev
+bind pager \CN sidebar-next
+bind pager \CO sidebar-open
+# }}}

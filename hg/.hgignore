@@ -1,0 +1,29 @@
+syntax: glob
+
+*.pyc
+.wo.conf
+*~
+*.sassc
+*.db
+*.tmp
+.DS_Store
+*.sqlite
+*.elc
+*.svn
+*.orig
+*.old
+*.sqlite3
+*.kpf
+*.swp
+_build
+deploy.py
+build
+.bundle
+tmp
+log
+*.pid
+.fabrc
+.netrwhist
+
+syntax: regexp
+(.*/)?\#[^/]*\#?$
