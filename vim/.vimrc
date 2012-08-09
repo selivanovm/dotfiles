@@ -213,6 +213,9 @@ cnoreabbrev W w
 " List the fixmes/todos in the current directory.
 nnoremap <leader>0 :vimgrep /TODO\\|FIXME/ **/*<CR>:cw<CR>
 
+" Add awesome grep.
+command! -nargs=+ Grp execute 'silent grep! <args>' | copen
+
 " Folding {{{
 
 " Unfold all the document
