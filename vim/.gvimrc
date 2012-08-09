@@ -1,5 +1,11 @@
 " Font face
-set guifont=Menlo\ for\ Powerline\ 9
+if g:os == 'linux'
+    set guifont=Menlo\ for\ Powerline\ 9
+elseif g:os == 'osx'
+    set guifont=Menlo\ for\ Powerline:h12
+end
+
+
 let g:Powerline_symbols = 'fancy'
 
 " Syntax color scheme
