@@ -3,7 +3,7 @@
 	url = git://github.com/sjl/badwolf.git
 [submodule "vim/.vim/bundle/command-t"]
 	path = vim/.vim/bundle/command-t
-	url = git://github.com/sjl/badwolf.git
+    url = git://github.com/wincent/Command-T.git
 [submodule "vim/.vim/bundle/gundo.vim"]
 	path = vim/.vim/bundle/gundo.vim
 	url = git://github.com/sjl/gundo.vim.git
