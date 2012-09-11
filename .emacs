@@ -563,7 +563,7 @@
 
 ;;; RHTML, for .erb.html
 
-(add-to-list 'load-path "~/.emacs.d/major-modes/rhtml")
+(add-to-list 'load-path "~/.emacs.d/minor-modes/rhtml")
 (require 'rhtml-mode)
 
 
