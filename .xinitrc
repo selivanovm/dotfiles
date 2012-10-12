@@ -8,14 +8,14 @@ export LANG=$XTERM_LOCALE
 
 export PATH=/home/thomas/bin:$PATH
 
-dropboxd &
+#dropboxd &
 
-parcellite &
+#parcellite &
 
-while true;
-do
-  awsetbg -r /home/thomas/pictures/wallpapers/
-  sleep 10m
-done &
+#while true;
+#do
+#  awsetbg -r /home/thomas/pictures/wallpapers/
+#  sleep 10m
+#done &
 
-exec awesome
+exec awesome -c /home/thomas/.config/awesome/rc.lua

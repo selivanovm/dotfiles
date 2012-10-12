@@ -14,11 +14,7 @@ URxvt*termName:screen-256color
 URxvt.foreground:white
 URxvt.background:black
 
-URxvt*font:                 xft:Menlo for Powerline:regular:size=10
-URxvt*imFont:               xft:Menlo for Powerline:regular:size=10
-URxvt*boldFont:             xft:Menlo for Powerline:bold:size=10
-URxvt*italicFont:           xft:Menlo for Powerline:italic:size=10
-URxvt*boldItalicFont:       xft:Menlo for Powerline:bold:italic:size=10
+URxvt*font:                 xft:DejaVu Sans Mono:regular:size=10
 
 ! black
 URxvt*color0  : #000000
