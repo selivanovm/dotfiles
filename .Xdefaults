@@ -2,6 +2,33 @@ xterm*faceName: Menlo for Powerline:pixelsize=13
 xterm*utf8: 2
 xterm*background: black
 xterm*foreground: white
+xterm*scrollBar: off
+!
+! black
+xterm*color0  : #000000
+xterm*color8  : #000000
+! red
+xterm*color1  : #E52222
+xterm*color9  : #E52222
+! green
+xterm*color2  : #A6E32D
+xterm*color10 : #A6E32D
+! yellow
+xterm*color3  : #FC951E
+xterm*color11 : #FC951E
+! blue
+xterm*color4  : #BF8DFF
+xterm*color12 : #BF8DFF
+! magenta
+xterm*color5  : #FA250F
+xterm*color13 : #FA250F
+! cyan
+xterm*color6  : #67D9F0
+xterm*color14 : #67D9F0
+! white
+xterm*color7  : #F2F2F2
+xterm*color15 : #F2F2F2
+
 
 Xft.dpi: 100
 Xft.antialias: true
@@ -10,7 +37,7 @@ Xft.hinting: true
 Xft.hintstyle: hintslight
 
 URxvt.scrollBar: off
-URxvt*termName:screen-256color
+URxvt*termName:xterm-256color
 URxvt.foreground:white
 URxvt.background:black
 

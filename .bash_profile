@@ -165,3 +165,5 @@ fi
 
 export GOROOT=$HOME/go
 export PATH=$GOROOT/bin:$PATH
+
+export TERMINAL=xterm
