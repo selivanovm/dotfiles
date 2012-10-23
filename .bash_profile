@@ -127,6 +127,8 @@ else
 
     # Set the path
     export PATH="/Users/thomas/Bin/:/Applications/Postgres.app/Contents/MacOS/bin:/usr/local/bin:$PATH"
+
+    alias java7="/Library/Java/JavaVirtualMachines/1.7.0.jdk/Contents/Home/bin/java"
 fi
 
 # Look for files containing a certain pattern
@@ -163,8 +165,13 @@ if [ -e "$VM_DIR" ]
 then source "$VM_DIR/vm.sh"
 fi
 
-export GOROOT=$HOME/go
+export GOROOT=$HOME/code/go
 export PATH=$GOROOT/bin:$PATH
 
-export TERMINAL=xterm
 alias emacs='emacs -nw'
+alias soul='cd ~/netsoul && perl jogsoul.pl jogsoul.conf'
+
+if [[ "$platform" == "Linux" ]];
+then
+    export TERMINAL=xterm
+fi

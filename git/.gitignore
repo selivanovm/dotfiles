@@ -38,3 +38,5 @@ placeholder.zsh
 .rvmrc
 
 .noseids
+Makefile.rule
+objs
