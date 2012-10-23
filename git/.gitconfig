@@ -12,10 +12,10 @@
     user = pelletier
 
 [difftool]
-	prompt = false
+    prompt = false
 
 [diff]
-	tool = vimdiff
+    tool = vimdiff
 
 [color]
     ui = true
@@ -28,5 +28,7 @@ cmd = "mvim -f $BASE $LOCAL $REMOTE $MERGED -c 'ThreesomeInit'"
 trustExitCode = true
 
 [alias]
-l = log -16 --color=always --all --topo-order --pretty='format:%Cgreen%h%Creset %s%Cred%d%Creset %C(black bold)(by %an)%Creset'
-	d = difftool
+    l = log -16 --color=always --all --topo-order --pretty='format:%Cgreen%h%Creset %s%Cred%d%Creset %C(black bold)(by %an)%Creset'
+    lg = log -16 --color=always --all --topo-order --pretty='format:%Cgreen%h%Creset %s%Cred%d%Creset %C(black bold)(by %an)%Creset' --graph
+    d = difftool
+    m = merge --no-ff
