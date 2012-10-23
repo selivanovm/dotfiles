@@ -375,7 +375,9 @@
 ; For now I almost only work with Django HTML pages.
 (add-to-list 'auto-mode-alist '("\\.html$" . django-html-mode))
 
+;;; GDB
 
+(setq gdb-many-windows t)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

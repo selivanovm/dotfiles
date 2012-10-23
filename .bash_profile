@@ -73,7 +73,7 @@ function devfw {
 
 
 # You know it is the 21th century
-export  TERM="xterm-256color"
+export TERM="xterm-256color"
 
 # Set macvim as the default editor if it is installed, just vim otherwise
 if command_exists mvim ; then
@@ -167,3 +167,4 @@ export GOROOT=$HOME/go
 export PATH=$GOROOT/bin:$PATH
 
 export TERMINAL=xterm
+alias emacs='emacs -nw'
