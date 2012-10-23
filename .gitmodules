@@ -49,3 +49,6 @@
 [submodule "vim/.vim/vimclojure"]
 	path = vim/.vim/vimclojure
 	url = git://github.com/emezeske/vimclojure.git
+[submodule ".emacs.d/minor-modes/rhtml"]
+	path = .emacs.d/minor-modes/rhtml
+	url = git://github.com/eschulte/rhtml.git

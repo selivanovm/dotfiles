@@ -6,8 +6,6 @@ require("awful.rules")
 require("beautiful")
 -- Notification library
 require("naughty")
--- Widget library
-require("vicious")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -97,52 +95,12 @@ mytextclock = awful.widget.textclock({ align = "right" })
 -- Create a systray
 mysystray = widget({ type = "systray" })
 
---Create Volume Progressbar
--- Initialize widget
-volwidget = awful.widget.progressbar()
--- Progressbar properties
-volwidget:set_ticks(true)
-volwidget:set_ticks_size(2)
-volwidget:set_width(8)
-volwidget:set_height(14)
-volwidget:set_vertical(true)
-volwidget:set_background_color("#232323")
-volwidget:set_border_color(nil)
-volwidget:set_color("#AECF96")
-volwidget:set_gradient_colors({ "green", "red" })
---Register widget
-vicious.register(volwidget, vicious.widgets.volume, "$1", 0.2, "Master")
---Mouse bindings
-volwidget.widget:buttons(awful.util.table.join(
-    awful.button({ }, 4, function () awful.util.spawn_with_shell("amixer -c 0 set Master 5+ unmute") end),
-    awful.button({ }, 5, function () awful.util.spawn_with_shell("amixer -c 0 set Master 5-") end)
-))
-
 volicon = widget({ type = "textbox" })
 volicon.text = "  ♫ "
 
 -- Date separtor
 dateicon = widget({ type = "textbox" })
 dateicon.text = "  ◔"
-
--- Memory usage widget (bar)
-
--- Initialize widget
-memwidget = widget({ type = "textbox" })
--- Register widget
-vicious.register(memwidget, vicious.widgets.mem, "  ♻ $2MB", 13)
-
--- CPU usage (graph)
--- Initialize widget
-cpuwidget = awful.widget.graph()
--- Graph properties
-cpuwidget:set_width(14)
-cpuwidget:set_height(14)
-cpuwidget:set_background_color("#232323")
-cpuwidget:set_color("#FF5656")
-cpuwidget:set_gradient_colors({ "#FF5656", "#88A175", "#AECF96" })
--- Register widget
-vicious.register(cpuwidget, vicious.widgets.cpu, "$1")
 
 cpuicon = widget({ type = "textbox" })
 cpuicon.text = "  ☢ "
@@ -227,10 +185,8 @@ for s = 1, screen.count() do
         mylayoutbox[s],
         mytextclock,
         dateicon,
-        volwidget.widget,
         volicon,
         memwidget,
-        cpuwidget.widget,
         cpuicon,
         s == 1 and mysystray or nil,
         trayicon,

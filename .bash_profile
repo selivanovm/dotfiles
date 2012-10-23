@@ -169,3 +169,8 @@ export GOROOT=$HOME/code/go
 export PATH=$GOROOT/bin:$PATH
 
 alias soul='cd ~/netsoul && perl jogsoul.pl jogsoul.conf'
+
+if [[ "$platform" == "Linux" ]];
+then
+    export TERMINAL=xterm
+fi
