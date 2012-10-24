@@ -175,3 +175,5 @@ if [[ "$platform" == "Linux" ]];
 then
     export TERMINAL=xterm
 fi
+
+alias valgrind='valgrind --tool=memcheck --leak-check=yes --show-reachable=yes'

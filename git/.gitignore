@@ -38,5 +38,8 @@ placeholder.zsh
 .rvmrc
 
 .noseids
-Makefile.rule
+Makefile.rules
 objs
+makefile.dep
+*.so
+myCipher

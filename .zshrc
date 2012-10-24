@@ -55,7 +55,7 @@ fi
 export PROMPT='$HOSTNAME$(user_name)%{$fg[cyan]%}%~%{$reset_color%} > '
 export RPROMPT='%{$fg[yellow]%}$(virtualenv_info)$(rvm_info)%{$reset_color%}$(hg_prompt_info)$(git_prompt_info)'
 
-ZSH_THEME_GIT_PROMPT_PREFIX=" on %{$fg[magenta]%}"
+ZSH_THEME_GIT_PROMPT_PREFIX=" %{$fg[magenta]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[green]%}!"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[green]%}?"
