@@ -70,6 +70,7 @@ set list
 setglobal number
 setglobal rnu
 syntax on
+let g:load_doxygen_syntax=1
 
 " Resize splits when the window is resized
 au VimResized * exe "normal! \<c-w>="
