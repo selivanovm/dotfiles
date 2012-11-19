@@ -448,9 +448,9 @@ let yankring_history_dir='~/.vim/tmp'
 
 " C {{{
 " This is EPITA coding style.
-autocmd FileType c set tabstop=2
-autocmd FileType c set shiftwidth=2
-autocmd FileType c set softtabstop=2
+autocmd FileType c set tabstop=4
+autocmd FileType c set shiftwidth=4
+autocmd FileType c set softtabstop=4
 autocmd FileType c set comments=sl:/**,mb:**,elx:*/
 autocmd FileType cpp set comments=sl:/**,mb:**,elx:*/
 " }}} --------------------------------------------------------------------------
