@@ -43,3 +43,4 @@ objs
 makefile.dep
 *.so
 myCipher
+.gdb_history
