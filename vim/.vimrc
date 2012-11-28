@@ -197,10 +197,6 @@ nnoremap <leader>o <C-w><C-v><C-l>:CommandT<CR>
 " Remove the word under the cursor
 nnoremap <leader>d diw
 
-" Spellchecking
-nnoremap <leader>sf :setlocal spell spelllang=fr<cr>
-nnoremap <leader>se :setlocal spell spelllang=en_us<cr>
-
 " Source
 vnoremap <leader>S y:execute @@<cr>
 nnoremap <leader>S ^vg_y:execute @@<cr>
@@ -373,6 +369,7 @@ inoremap []     []
 " Command-T {{{
 
 nnoremap <leader>t :CommandT<CR>
+set wildignore+=*.o,*.pyc,.git
 
 " }}}
 " Gundo {{{

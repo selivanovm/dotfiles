@@ -21,10 +21,10 @@
     ui = true
 
 [merge]
-tool = threesome
+tool = splice
 
-[mergetool "threesome"]
-cmd = "mvim -f $BASE $LOCAL $REMOTE $MERGED -c 'ThreesomeInit'"
+[mergetool "splice"]
+cmd = "mvim -f $BASE $LOCAL $REMOTE $MERGED -c 'SpliceInit'"
 trustExitCode = true
 
 [alias]
