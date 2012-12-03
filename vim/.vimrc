@@ -71,6 +71,7 @@ setglobal number
 setglobal rnu
 set cinoptions=(0,u0,U0,t0,g0,N-s
 syntax on
+let g:load_doxygen_syntax=1
 
 " Resize splits when the window is resized
 au VimResized * exe "normal! \<c-w>="
@@ -196,10 +197,6 @@ nnoremap <leader>o <C-w><C-v><C-l>:CommandT<CR>
 
 " Remove the word under the cursor
 nnoremap <leader>d diw
-
-" Spellchecking
-nnoremap <leader>sf :setlocal spell spelllang=fr<cr>
-nnoremap <leader>se :setlocal spell spelllang=en_us<cr>
 
 " Source
 vnoremap <leader>S y:execute @@<cr>
@@ -373,6 +370,7 @@ inoremap []     []
 " Command-T {{{
 
 nnoremap <leader>t :CommandT<CR>
+set wildignore+=*.o,*.pyc,.git
 
 " }}}
 " Gundo {{{

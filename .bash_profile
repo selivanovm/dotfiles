@@ -177,3 +177,8 @@ then
 fi
 
 alias valgrind='valgrind --tool=memcheck --leak-check=yes --show-reachable=yes'
+
+if [[ "$platform" == "FreeBSD" ]];
+then
+    alias gdb='gdb --tui'
+fi
