@@ -69,6 +69,7 @@ set colorcolumn=+1
 set list
 setglobal number
 setglobal rnu
+set cinoptions=(0,u0,U0,t0,g0,N-s
 syntax on
 
 " Resize splits when the window is resized
@@ -447,11 +448,12 @@ let yankring_history_dir='~/.vim/tmp'
 
 " C {{{
 " This is EPITA coding style.
-autocmd FileType c set tabstop=2
-autocmd FileType c set shiftwidth=2
-autocmd FileType c set softtabstop=2
+autocmd FileType c set tabstop=4
+autocmd FileType c set shiftwidth=4
+autocmd FileType c set softtabstop=4
 autocmd FileType c set comments=sl:/**,mb:**,elx:*/
 autocmd FileType cpp set comments=sl:/**,mb:**,elx:*/
+let g:load_doxygen_syntax=1
 " }}} --------------------------------------------------------------------------
 " Clojure {{{
 
@@ -512,6 +514,10 @@ autocmd FileType python set ft=python.django " For SnipMate
 " Correct .tex file handling
 let g:tex_flavor='latex'
 
+" }}}
+" Tiger {{{
+au BufRead,BufNewFile *.tig set filetype=tiger
+au BufRead,BufNewFile *.tih set filetype=tiger
 " }}}
 " Vagrant {{{
 
