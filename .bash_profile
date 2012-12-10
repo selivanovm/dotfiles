@@ -30,7 +30,7 @@ alias nose='nosetests --with-doctest --rednose -s'
 alias r='rails'
 alias chmox='chmod +x'
 alias f='python ~/.fpaster.py'
-alias ls='ls -AlGhp'
+alias ls='ls -lGhp'
 
 # Git
 alias gc='git commit -a'
@@ -90,7 +90,7 @@ fi
 if [[ "$platform" == "Linux" ]];
 then
 # Linux specific
-    alias ls='ls -AlGhp --color'
+    alias ls='ls -lGhp --color'
     alias ll='ls --format=single-column "--ignore=.*"'
     PATH="/home/thomas/.gem/ruby/1.9.1/bin:$PATH"
     PATH="/home/thomas/bin/:$PATH"

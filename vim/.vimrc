@@ -369,6 +369,7 @@ inoremap []     []
 " Command-T {{{
 
 nnoremap <leader>t :CommandT<CR>
+set wildignore+=*.o,*.pyc
 
 " }}}
 " Gundo {{{
