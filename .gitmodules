@@ -52,3 +52,6 @@
 [submodule ".emacs.d/minor-modes/rhtml"]
 	path = .emacs.d/minor-modes/rhtml
 	url = git://github.com/eschulte/rhtml.git
+[submodule "vim/.vim/bundle/handlebars"]
+	path = vim/.vim/bundle/handlebars
+	url = git://github.com/nono/vim-handlebars.git
