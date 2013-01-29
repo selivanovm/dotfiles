@@ -72,6 +72,7 @@ set colorcolumn=+1
 set list
 setglobal number
 setglobal rnu
+set cinoptions=(0,u0,U0,t0,g0,N-s
 syntax on
 let g:load_doxygen_syntax=1
 
@@ -372,6 +373,7 @@ inoremap []     []
 " Command-T {{{
 
 nnoremap <leader>t :CommandT<CR>
+set wildignore+=*.o,*.pyc
 set wildignore+=*.o,*.pyc,.git
 
 " }}}
@@ -447,12 +449,38 @@ let yankring_history_dir='~/.vim/tmp'
 " File type-specific configuration ---------------------------------------- {{{
 
 " C {{{
-" This is EPITA coding style.
+" This respects EPITA's C / C++ coding style.
+" The following rules are based on the vim plugin for the FreeBSD coding style:
+" http://svn0.us-east.freebsd.org/base/head/tools/tools/editing/freebsd.vim
+
+
+" Ignore indents caused by parentheses in FreeBSD style.
+function! IgnoreParenIndent()
+    let indent = cindent(v:lnum)
+
+    if indent > 4000
+        if cindent(v:lnum - 1) > 4000
+            return indent(v:lnum - 1)
+        else
+            return indent(v:lnum - 1) + 4
+        endif
+    else
+        return (indent)
+    endif
+endfun
+
 autocmd FileType c set tabstop=4
 autocmd FileType c set shiftwidth=4
 autocmd FileType c set softtabstop=4
 autocmd FileType c set comments=sl:/**,mb:**,elx:*/
 autocmd FileType cpp set comments=sl:/**,mb:**,elx:*/
+autocmd FileType c set cindent
+autocmd FileType c set cinoptions=(4200,u4200,+0.5s,*500,:0,t0,U4200
+autocmd FileType c set indentexpr=IgnoreParenIndent()
+autocmd FileType c set indentkeys=0{,0},0),:,0#,!^F,o,O,e
+
+let g:load_doxygen_syntax=1
+
 " }}} --------------------------------------------------------------------------
 " Clojure {{{
 
@@ -513,6 +541,10 @@ autocmd FileType python set ft=python.django " For SnipMate
 " Correct .tex file handling
 let g:tex_flavor='latex'
 
+" }}}
+" Tiger {{{
+au BufRead,BufNewFile *.tig set filetype=tiger
+au BufRead,BufNewFile *.tih set filetype=tiger
 " }}}
 " Vagrant {{{
 

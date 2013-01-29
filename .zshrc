@@ -6,6 +6,8 @@ setopt prompt_subst
 plugins=(command-coloring git fabric lein)
 source $ZSH/oh-my-zsh.sh
 
+unsetopt correct_all
+
 # Load the Bash configuration (lazy boy!)
 . ~/.bash_profile
 
@@ -25,14 +27,14 @@ patches: <patches|join( → )|pre_applied(%{$fg[yellow]%})|post_applied(%{$reset
 }
 
 function virtualenv_info {
-    [ $VIRTUAL_ENV ] && echo ' ('`basename $VIRTUAL_ENV`')'
+    [ $VIRTUAL_ENV ] && echo ' (p:'`basename $VIRTUAL_ENV`')'
 }
 
 function rvm_info {
     if [[ -a ~/.rvm/bin/rvm-prompt ]] then
         inf=$(~/.rvm/bin/rvm-prompt g| awk '{sub(/@/,"");print}')
         if [[ $inf != "" ]] then
-            echo " ($inf)"
+            echo " (r:$inf)"
         fi
     fi
 }

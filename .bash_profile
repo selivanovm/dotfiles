@@ -89,7 +89,7 @@ fi
 if [[ "$platform" == "Linux" ]];
 then
 # Linux specific
-    alias ls='ls -AlGhp --color'
+    alias ls='ls -lGhp --color'
     alias ll='ls --format=single-column "--ignore=.*"'
     PATH="/home/thomas/.gem/ruby/1.9.1/bin:$PATH"
     PATH="/home/thomas/bin/:$PATH"
@@ -177,3 +177,8 @@ then
 fi
 
 alias valgrind='valgrind --tool=memcheck --leak-check=yes --show-reachable=yes'
+
+if [[ "$platform" == "FreeBSD" ]];
+then
+    alias gdb='gdb --tui'
+fi
