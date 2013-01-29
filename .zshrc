@@ -1,8 +1,4 @@
-if [ -d "$HOME/code/dotfiles" ]
-    then export DOTFILES=$HOME/code/dotfiles/
-    else export DOTFILES=$HOME/dotfiles
-fi
-
+export DOTFILES=$HOME/code/dotfiles/
 export ZSH=$DOTFILES/oh-my-zsh
 export DISABLE_AUTO_UPDATE="true"
 export ZSH_THEME="prose"
@@ -13,6 +9,8 @@ source $ZSH/oh-my-zsh.sh
 # Load the Bash configuration (lazy boy!)
 . ~/.bash_profile
 
+# Set continuous history writting
+setopt INC_APPEND_HISTORY
 
 # Colorful world
 autoload -U colors && colors

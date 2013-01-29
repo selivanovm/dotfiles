@@ -30,7 +30,6 @@ alias nose='nosetests --with-doctest --rednose -s'
 alias r='rails'
 alias chmox='chmod +x'
 alias f='python ~/.fpaster.py'
-alias ls='ls -AlGhp'
 
 # Git
 alias gc='git commit -a'
@@ -103,6 +102,7 @@ then
     alias hibernate='dbus-send --system --print-reply --dest="org.freedesktop.UPower" /org/freedesktop/UPower org.freedesktop.UPower.Hibernate'
 # OS X specific
 else
+    alias la='ls -ali'
     alias l='ls -1'
     alias ll='ls -C'
     # Some various binaries

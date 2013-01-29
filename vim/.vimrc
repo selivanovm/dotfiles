@@ -35,6 +35,9 @@ set nocompatible
 " Prevent security exploits with modelines files
 set modelines=0
 
+" When I use some non-bash compatible shells
+set shell=/bin/bash
+
 " Backups {{{
 
 set undodir=~/.vim/tmp/undo//     " undo files
