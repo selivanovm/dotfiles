@@ -103,15 +103,10 @@ alias valgrind='valgrind --tool=memcheck --leak-check=yes --show-reachable=yes'
 if [[ "$platform" == "Linux" ]]; then
     alias ls='ls -lGhp --color'
     alias ll='ls --format=single-column "--ignore=.*"'
-<<<<<<< HEAD
     PATH="/home/thomas/.gem/ruby/1.9.1/bin:$PATH"
     PATH="$HOME/bin/:$PATH"
-    export PATH=$PATH
-=======
-
     export PATH="/home/thomas/bin/:$PATH"
     export TERMINAL=xterm
->>>>>>> 3154c46334a7863797df7705381fb5eebed23e60
 
     # Power control using DBus. (need to be in %wheel).
     alias shutdown='dbus-send --system --print-reply --dest="org.freedesktop.ConsoleKit" /org/freedesktop/ConsoleKit/Manager org.freedesktop.ConsoleKit.Manager.Stop'
