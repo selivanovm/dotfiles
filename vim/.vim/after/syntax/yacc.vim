@@ -69,7 +69,7 @@ syn	match	yaccKey	"@[\$0-9]\+"	contained	containedin=cParen
 syn	keyword	yaccKeyActn	yyerrok yyclearin	contained	containedin=cParen
 syn cluster yaccCode add=yaccKey,yaccKeyActn
 
-syn	match	bisonOption	"^\s*%\(require\|defines\|debug\|skeleton\|name-prefix\|language\|glr-parser\|expect\|param\)\>"	contained
+syn	match	bisonOption	"^\s*%\(require\|defines\|debug\|skeleton\|name-prefix\|language\|glr-parser\|expect\|param\|expect-rr\)\>"	contained
 
 syn	match	yaccUnionStart	"^%union"	skipwhite skipnl nextgroup=yaccUnion	contained
 HiFold syn	region	yaccUnion	matchgroup=yaccCurly start="{" matchgroup=yaccCurly end="}" contains=@yaccCode	contained
