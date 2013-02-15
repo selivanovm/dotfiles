@@ -8,6 +8,7 @@ cond_source () {
     [[ -s "$1" ]] && source "$1"
 }
 
+
 platform=`uname`
 
 #i18n
@@ -93,7 +94,7 @@ then
     alias ls='ls -AlGhp --color'
     alias ll='ls --format=single-column "--ignore=.*"'
     PATH="/home/thomas/.gem/ruby/1.9.1/bin:$PATH"
-    PATH="/home/thomas/bin/:$PATH"
+    PATH="$HOME/bin/:$PATH"
     export PATH=$PATH
 
     # Power control using DBus. (need to be in %wheel).
@@ -182,3 +183,5 @@ if [[ "$platform" == "FreeBSD" ]];
 then
     alias gdb='gdb --tui'
 fi
+alias z='zlock -immed'
+export PATH=/home/pellet_t/local/bin:$PATH

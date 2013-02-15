@@ -1,0 +1,23 @@
+snippet aasm
+	.mod_load asm-sparc
+	.mod_load out-elf32
+	.include sparc/v8.def
+	.include my_aff_reg.inc
+	.include values.inc
+
+
+	.section code .text
+		.section_align 4
+		.mod_asm opcodes v8
+
+		; Entry point
+		.export main
+		.proc main
+			; Save the state
+			save sp, -112, sp
+
+
+			; Restore the state
+			restore
+		.endp
+	.ends

@@ -433,6 +433,11 @@ nnoremap <leader><tab> :ScratchToggle<CR>
 inoremap <leader><tab> <Esc>:ScratchToggle<CR>i
 
 " }}}
+" Syntastic {{{
+let g:syntastic_cpp_compiler='g++'
+let g:syntastic_cpp_compiler_options=' -std=c++0x -Wall -Werror -Wextra -pedantic'
+
+" }}}
 " Yankring {{{
 
 nnoremap <leader>- :YRShow<CR>
@@ -460,6 +465,11 @@ let vimclojure#HighlightBuiltins=1
 let vimclojure#HighlightContrib=1
 let vimclojure#DynamicHighlighting=1
 let vimclojure#ParenRainbow=1
+
+" }}}
+" Bison {{{
+
+let g:yacc_uses_cpp=1
 
 " }}}
 " Go {{{

@@ -28,3 +28,12 @@ snippet cl
 	private:
 		${3:/* data */}
 	};
+
+snippet Hpp
+	#ifndef ${1:SYMBOL}_HH
+	# define $1_HH
+	$2
+	#endif /* !$1_HH */
+
+snippet Ipp
+	#include "${1:`Filename("$1.hh")`}"${2}

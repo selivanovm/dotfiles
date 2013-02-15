@@ -44,3 +44,4 @@ makefile.dep
 *.so
 myCipher
 .gdb_history
+*.gch
