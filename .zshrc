@@ -1,22 +1,21 @@
-if [ -d "$HOME/code/dotfiles" ]
-    then export DOTFILES=$HOME/code/dotfiles/
-    else export DOTFILES=$HOME/dotfiles
-fi
-
+export DOTFILES=$HOME/code/dotfiles/
 export ZSH=$DOTFILES/oh-my-zsh
 export DISABLE_AUTO_UPDATE="true"
 export ZSH_THEME="prose"
+
+setopt INC_APPEND_HISTORY
 setopt prompt_subst
-plugins=(command-coloring git fabric lein)
+unsetopt correct_all
+
+plugins=(command-coloring git)
 source $ZSH/oh-my-zsh.sh
+
 
 # Load the Bash configuration (lazy boy!)
 . ~/.bash_profile
 
-
 # Colorful world
 autoload -U colors && colors
-
 
 function hg_prompt_info {
     hg prompt --angle-brackets "\
@@ -27,14 +26,14 @@ patches: <patches|join( → )|pre_applied(%{$fg[yellow]%})|post_applied(%{$reset
 }
 
 function virtualenv_info {
-    [ $VIRTUAL_ENV ] && echo ' ('`basename $VIRTUAL_ENV`')'
+    [ $VIRTUAL_ENV ] && echo ' (p:'`basename $VIRTUAL_ENV`')'
 }
 
 function rvm_info {
     if [[ -a ~/.rvm/bin/rvm-prompt ]] then
         inf=$(~/.rvm/bin/rvm-prompt g| awk '{sub(/@/,"");print}')
         if [[ $inf != "" ]] then
-            echo " ($inf)"
+            echo " (r:$inf)"
         fi
     fi
 }
