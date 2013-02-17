@@ -37,6 +37,7 @@ trustExitCode = true
     p = pull
     s = status
     h = log -p
+    stats = shortlog -s -n --all
 
 [push]
 	default = current
