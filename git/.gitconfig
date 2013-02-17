@@ -36,6 +36,7 @@ trustExitCode = true
     m = merge --no-ff
     p = pull
     s = status
+    h = log -p
 
 [push]
 	default = current
