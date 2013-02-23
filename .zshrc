@@ -60,5 +60,12 @@ ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[green]%}!"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[green]%}?"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 
+export HISTFILE=$HOME/.zhistory
+setopt APPEND_HISTORY
+export HISTSIZE=1200
+export SAVEHIST=1000
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt EXTENDED_HISTORY
+unsetopt SHARE_HISTORY
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
