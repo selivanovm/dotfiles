@@ -69,3 +69,5 @@ setopt EXTENDED_HISTORY
 unsetopt SHARE_HISTORY
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+alias heroku logs='nocorrect heroku logs'
