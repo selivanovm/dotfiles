@@ -14,6 +14,8 @@ platform=`uname`
 export LANG=en_US.UTF-8 # I prefer english over french, sorry
 export XTERM_LOCALE=$LANG
 
+# PyPy
+PYTHONPATH="$HONE/code/pypy/:$PYTHONPATH"
 PYTHONPATH="./:$PYTHONPATH"
 export PYTHONPATH
 
