@@ -45,3 +45,4 @@ makefile.dep
 myCipher
 .gdb_history
 .powenv
+*.gch

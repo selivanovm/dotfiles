@@ -1,24 +1,21 @@
-if [ -d "$HOME/code/dotfiles" ]
-    then export DOTFILES=$HOME/code/dotfiles/
-    else export DOTFILES=$HOME/dotfiles
-fi
-
+export DOTFILES=$HOME/code/dotfiles/
 export ZSH=$DOTFILES/oh-my-zsh
 export DISABLE_AUTO_UPDATE="true"
 export ZSH_THEME="prose"
+
+setopt INC_APPEND_HISTORY
 setopt prompt_subst
-plugins=(command-coloring git fabric lein)
+unsetopt correct_all
+
+plugins=(command-coloring git)
 source $ZSH/oh-my-zsh.sh
 
-unsetopt correct_all
 
 # Load the Bash configuration (lazy boy!)
 . ~/.bash_profile
 
-
 # Colorful world
 autoload -U colors && colors
-
 
 function hg_prompt_info {
     hg prompt --angle-brackets "\
@@ -63,5 +60,14 @@ ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[green]%}!"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[green]%}?"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 
+export HISTFILE=$HOME/.zhistory
+setopt APPEND_HISTORY
+export HISTSIZE=1200
+export SAVEHIST=1000
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt EXTENDED_HISTORY
+unsetopt SHARE_HISTORY
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+alias heroku logs='nocorrect heroku logs'
