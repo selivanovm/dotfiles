@@ -74,7 +74,10 @@ alias fab='fab -c .fabrc'
 cond_source "$HOME/.rvm/scripts/rvm"
 export RAILS_ENV="development"
 alias r='rails'
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+if which rbenv > /dev/null; then
+    eval "$(rbenv init -)";
+    export PATH="~/.rbenv/shims:$PATH"
+fi
 # }}}
 # Go! {{{
 export GOROOT=$HOME/code/go
