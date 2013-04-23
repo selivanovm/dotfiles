@@ -7,7 +7,7 @@ setopt INC_APPEND_HISTORY
 setopt prompt_subst
 unsetopt correct_all
 
-plugins=(command-coloring git)
+plugins=(command-coloring git rbenv)
 source $ZSH/oh-my-zsh.sh
 
 
@@ -38,6 +38,18 @@ function rvm_info {
     fi
 }
 
+function rbenv_info {
+    if [[ $FOUND_RBENV -eq 1 ]] then
+        if [[ "$(current_ruby)" != "system" ]] then
+            echo -n " (rb:"
+            if [[ ! -z "$(current_gemset)" ]] then
+                echo -n "$(current_gemset)@"
+            fi
+            echo "$(current_ruby))"
+        fi
+    fi
+}
+
 function user_name {
     if [[ `whoami` -ne 'thomas' ]] then
         echo "%{$fg[magenta]%}%n%{$reset_color%} | "
@@ -52,7 +64,7 @@ else
 fi
 
 export PROMPT='$HOSTNAME$(user_name)%{$fg[cyan]%}%~%{$reset_color%} > '
-export RPROMPT='%{$fg[yellow]%}$(virtualenv_info)$(rvm_info)%{$reset_color%}$(hg_prompt_info)$(git_prompt_info)'
+export RPROMPT='%{$fg[yellow]%}$(virtualenv_info)$(rvm_info)$(rbenv_info)%{$reset_color%}$(hg_prompt_info)$(git_prompt_info)'
 
 ZSH_THEME_GIT_PROMPT_PREFIX=" %{$fg[magenta]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
@@ -70,4 +82,4 @@ unsetopt SHARE_HISTORY
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
-alias heroku logs='nocorrect heroku logs'
+#alias heroku logs='nocorrect heroku logs'

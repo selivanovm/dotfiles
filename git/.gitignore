@@ -46,3 +46,4 @@ myCipher
 .gdb_history
 .powenv
 *.gch
+.ruby-version

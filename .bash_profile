@@ -74,10 +74,12 @@ alias fab='fab -c .fabrc'
 cond_source "$HOME/.rvm/scripts/rvm"
 export RAILS_ENV="development"
 alias r='rails'
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 # }}}
 # Go! {{{
 export GOROOT=$HOME/code/go
 export PATH=$GOROOT/bin:$PATH
+export PATH=$HOME/code/google_appengine:$PATH
 
 alias go!='export GOPATH=`pwd`'
 # }}}
