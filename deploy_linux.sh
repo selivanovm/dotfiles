@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# Prepare the submodules
-git submodules --init --recursive
-
-
 # Make sure the room is clean
 rm -R ~/.emacs*
 rm -R ~/.bash*

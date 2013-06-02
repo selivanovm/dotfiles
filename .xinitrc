@@ -1,21 +1,17 @@
-xmodmap -e "remove Lock = Caps_Lock"
-xmodmap -e "keysym Caps_Lock = Control_L"
-xmodmap -e "add Control = Control_L"
+xmodmap /home/thomas/.xmodmap
 
-export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
-export XTERM_LOCALE=en_US.UTF-8
-export LANG=$XTERM_LOCALE 
+eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh)
+export SSH_AUTH_SOCK
+export GPG_AGENT_INFO
+export GNOME_KEYRING_CONTROL
+export GNOME_KEYRING_PID
 
-export PATH=/home/thomas/bin:$PATH
-
-#dropboxd &
-
-#parcellite &
-
-#while true;
-#do
-#  awsetbg -r /home/thomas/pictures/wallpapers/
-#  sleep 10m
-#done &
-
-exec awesome -c /home/thomas/.config/awesome/rc.lua
+#exec --no-startup-id wicd-client -t
+/usr/bin/gnome-keyring-daemon --start --components=gpg
+/usr/bin/gnome-keyring-daemon --start --components=pkcs11
+/usr/bin/gnome-keyring-daemon --start --components=secrets
+/usr/bin/gnome-keyring-daemon --start --components=ssh
+SSH_AUTH_SOCK=`ss -xl | grep -o -e '/run/user/1000/keyring-.*/ssh'`
+[ -z "$SSH_AUTH_SOCK" ] || export SSH_AUTH_SOCK=$SSH_AUTH_SOCK
+exec dbus-launch i3
+#exec startxfce4

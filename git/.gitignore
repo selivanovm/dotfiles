@@ -47,3 +47,4 @@ myCipher
 .powenv
 *.gch
 .ruby-version
+.rbenv-gemsets

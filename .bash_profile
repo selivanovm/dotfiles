@@ -63,7 +63,7 @@ export PYTHONPATH="./:$PYTHONPATH"
 export WORKON_HOME=~/.venvs
 mkdir -p $WORKON_HOME
 export PATH="$WORKON_HOME:$PATH"
-VIRTUALENVWRAPPER_PYTHON=/usr/bin/python2.7
+#VIRTUALENVWRAPPER_PYTHON=/usr/bin/python2.7
 cond_source "/usr/bin/virtualenvwrapper.sh"
 cond_source "/usr/local/bin/virtualenvwrapper.sh"
 
@@ -74,9 +74,10 @@ alias fab='fab -c .fabrc'
 cond_source "$HOME/.rvm/scripts/rvm"
 export RAILS_ENV="development"
 alias r='rails'
+export PATH="$HOME/.rbenv/bin:$PATH"
 if which rbenv > /dev/null; then
     eval "$(rbenv init -)";
-    export PATH="~/.rbenv/shims:$PATH"
+    export PATH="$HOME/.rbenv/shims:$PATH"
 fi
 # }}}
 # Go! {{{
@@ -183,4 +184,7 @@ then
 fi
 alias z='zlock -immed'
 export PATH=/home/pellet_t/local/bin:$PATH
+# }}}
+# Emscripten {{{
+export PATH="$HOME/src/emscripten/:$PATH"
 # }}}
