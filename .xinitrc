@@ -5,13 +5,10 @@ export SSH_AUTH_SOCK
 export GPG_AGENT_INFO
 export GNOME_KEYRING_CONTROL
 export GNOME_KEYRING_PID
+export GNOME_KEYRING_SOCKET
 
 #exec --no-startup-id wicd-client -t
-/usr/bin/gnome-keyring-daemon --start --components=gpg
-/usr/bin/gnome-keyring-daemon --start --components=pkcs11
-/usr/bin/gnome-keyring-daemon --start --components=secrets
-/usr/bin/gnome-keyring-daemon --start --components=ssh
 SSH_AUTH_SOCK=`ss -xl | grep -o -e '/run/user/1000/keyring-.*/ssh'`
 [ -z "$SSH_AUTH_SOCK" ] || export SSH_AUTH_SOCK=$SSH_AUTH_SOCK
-exec dbus-launch i3
+#exec dbus-launch i3
 #exec startxfce4

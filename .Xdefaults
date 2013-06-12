@@ -1,8 +1,8 @@
-xterm*faceName: Menlo for Powerline:pixelsize=13
+!xterm*faceName: Menlo for Powerline:pixelsize=13
 xterm*faceName: Monaco:pixelsize=13
 xterm*utf8: 2
-xterm*background: black
-xterm*foreground: white
+*background: black
+*foreground: white
 xterm*scrollBar: off
 
 XTerm*VT100.translations: #override <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)

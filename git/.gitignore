@@ -48,3 +48,6 @@ myCipher
 *.gch
 .ruby-version
 .rbenv-gemsets
+node_modules
+.idea
+*.iml

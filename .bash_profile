@@ -89,6 +89,8 @@ alias go!='export GOPATH=`pwd`'
 # }}}
 # Node {{{
 export NODE_PATH="/usr/local/lib/node_modules:/Users/thomas/.npm/"
+export PATH="./node_modules/.bin:$PATH"
+export grunt='nocorrect grunt'
 # }}}
 # Git {{{
 alias g='git'
@@ -114,8 +116,9 @@ alias valgrind='valgrind --tool=memcheck --leak-check=yes --show-reachable=yes'
 # }}}
 # Linux {{{
 if [[ "$platform" == "Linux" ]]; then
-    alias ls='ls -lGhp --color'
-    alias ll='ls --format=single-column "--ignore=.*"'
+    alias ll='\ls -lGhp --color'
+    alias ls='\ls -Ali --color'
+    alias l='\ls --color -1'
     PATH="/home/thomas/.gem/ruby/1.9.1/bin:$PATH"
     PATH="$HOME/bin/:$PATH"
     export PATH="/home/thomas/bin/:$PATH"
