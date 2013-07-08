@@ -273,9 +273,9 @@
 
 ;;; STYLE
 
-(set-frame-font "Menlo-12")
+;(set-frame-font "Menlo-for-Powerline-12")
 ; This is beacause of the daemon mode, which does not take the (set-frame-font)
-(add-to-list 'default-frame-alist '(font . "Menlo-14"))
+;(add-to-list 'default-frame-alist '(font . "Menlo-14"))
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 (add-to-list 'custom-theme-load-path "~/code/color-theme-molokai/")
 ;(load-theme 'molokai t)
@@ -414,7 +414,7 @@
 (global-set-key "\M-;" 'comment-dwim-line)
 
 ;; Mark
-(global-set-key "\C-a" 'set-mark-command)
+;(global-set-key "\C-a" 'set-mark-command)
 
 ;; Windows
 (global-set-key "\C-w" 'move-beginning-of-line)
@@ -460,9 +460,9 @@
 
 ;;; STYLE
 
-(set-frame-font "Menlo-12")
+;(set-frame-font "Menlo-12")
 ; This is beacause of the daemon mode, which does not take the (set-frame-font)
-(add-to-list 'default-frame-alist '(font . "Menlo-14"))
+;(add-to-list 'default-frame-alist '(font . "Menlo-14"))
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 (add-to-list 'custom-theme-load-path "~/code/color-theme-molokai/")
 ;(load-theme 'molokai t)

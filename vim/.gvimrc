@@ -1,6 +1,6 @@
 " Font face
 if g:os == 'linux'
-    set guifont=Menlo\ for\ Powerline\ 9
+    set guifont=Menlo\ for\ Powerline\ 10
 elseif g:os == 'osx'
     set guifont=Menlo\ for\ Powerline:h12
 end

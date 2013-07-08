@@ -1,4 +1,5 @@
 xmodmap /home/thomas/.xmodmap
+xrdb /home/thomas/.Xdefaults
 
 eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh)
 export SSH_AUTH_SOCK
