@@ -279,7 +279,7 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 (add-to-list 'custom-theme-load-path "~/code/color-theme-molokai/")
 ;(load-theme 'molokai t)
-(load-theme 'mac-classic t)
+;(load-theme 'mac-classic t)
 
 
 
@@ -300,14 +300,13 @@
 (yas/initialize)
 
 
-;;; SLIME CONFIGURATION
-
-(add-to-list 'load-path "~/.emacs.d/slime")
-(require 'slime)
-;; Define CLISP as the default LISP interpreter.
-(setq inferior-lisp-program "/usr/local/bin/clisp")
-(eval-after-load "slime" (slime-setup '(slime-repl)))
-(slime-setup)
+;;; SLIME CONFIGURATION  
+;; (add-to-list 'load-path "~/.emacs.d/slime")
+;; (require 'slime)
+;; ;; Define CLISP as the default LISP interpreter.
+;; (setq inferior-lisp-program "/usr/local/bin/clisp")
+;; (eval-after-load "slime" (slime-setup '(slime-repl)))
+;; (slime-setup)
 
 
 ;;; SCHEME CONFIGURATION
@@ -466,7 +465,7 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 (add-to-list 'custom-theme-load-path "~/code/color-theme-molokai/")
 ;(load-theme 'molokai t)
-(load-theme 'mac-classic t)
+;(load-theme 'mac-classic t)
 
 
 
@@ -487,15 +486,13 @@
 (yas/initialize)
 (setq yas/snippet-dirs "~/.emacs.d/snippets")
 
-;;; SLIME CONFIGURATION
-
-(add-to-list 'load-path "~/.emacs.d/slime")
-(require 'slime)
-;; Define CLISP as the default LISP interpreter.
-(setq inferior-lisp-program "/usr/local/bin/clisp")
-(eval-after-load "slime" (slime-setup '(slime-repl)))
-(slime-setup)
-
+;; ;;; SL
+;; (add-to-list 'load-path "~/.emacs.d/slime")
+;; (require 'slime)
+;; ;; Define CLISP as the default LISP interpreter.
+;; (setq inferior-lisp-program "/usr/local/bin/clisp")
+;; (eval-after-load "slime" (slime-setup '(slime-repl)))
+;; (slime-
 
 ;;; SCHEME CONFIGURATION
 (setq scheme-program-name "scheme")
