@@ -191,3 +191,6 @@ export PATH=/home/pellet_t/local/bin:$PATH
 # Emscripten {{{
 export PATH="$HOME/src/emscripten/:$PATH"
 # }}}
+# Zendesk {{{
+alias zat='echo "http://thomas.zendesk.com" | zat'
+# }}}
