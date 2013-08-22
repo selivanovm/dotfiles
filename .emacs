@@ -14,6 +14,16 @@
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
 
+;; Ace-jump-mode
+(require 'ace-jump-mode)
+(define-key global-map (kbd "C-=") 'ace-jump-mode)
+
+;; Key chords
+(require 'key-chord)
+(key-chord-mode 1)
+(key-chord-define-global "fg" 'iy-go-to-char)
+(key-chord-define-global "df" 'iy-go-to-char-backward)
+
 ;; Hide splash
 (setq inhibit-startup-message t
       inhibit-startup-echo-area-message t)
@@ -65,6 +75,7 @@
 ;; CC (C, C++, Java...)
 (setq c-default-style "bsd"
       c-basic-offset 2)
+(global-set-key (kbd "C-x C-o") 'ff-find-other-file)
 
 ;;; Automatic indentation
 (add-hook 'c-mode-common-hook '(lambda () (c-toggle-auto-state 1)))
