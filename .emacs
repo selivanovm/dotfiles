@@ -14,6 +14,9 @@
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
 
+;; Use the Alt key as meta
+(setq x-alt-keysym 'meta)
+
 ;; Ace-jump-mode
 (require 'ace-jump-mode)
 (define-key global-map (kbd "C-=") 'ace-jump-mode)
