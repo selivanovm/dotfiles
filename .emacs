@@ -75,6 +75,9 @@
 (setq ido-enable-flex-matching t)
 (setq ido-everywhere t)
 
+;; Comment region
+(define-key global-map (kbd "C-x ;") 'comment-region)
+
 ;; CC (C, C++, Java...)
 (setq c-default-style "bsd"
       c-basic-offset 2)
