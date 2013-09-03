@@ -17,6 +17,9 @@
 ;; Use the Alt key as meta
 (setq x-alt-keysym 'meta)
 
+;; Require cl, because of a change in how cl is loaded in Emacs 24
+(require 'cl)
+
 ;; Ace-jump-mode
 (require 'ace-jump-mode)
 (define-key global-map (kbd "C-=") 'ace-jump-mode)
@@ -88,6 +91,9 @@
 
 ;; Javascript
 (setq js-indent-level 2)
+
+;; Shell scripting
+(add-to-list 'auto-mode-alist '("\\.zsh$" . shell-script-mode))
 
 ;; CMake
 (require 'cmake-mode)

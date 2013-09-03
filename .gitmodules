@@ -1,60 +1,60 @@
 [submodule "vim/.vim/bundle/badwolf"]
-	path = vim/.vim/bundle/badwolf
-	url = git://github.com/sjl/badwolf.git
+    path = vim/.vim/bundle/badwolf
+    url = git://github.com/sjl/badwolf.git
 [submodule "vim/.vim/bundle/command-t"]
-	path = vim/.vim/bundle/command-t
+    path = vim/.vim/bundle/command-t
     url = git://github.com/wincent/Command-T.git
 [submodule "vim/.vim/bundle/gundo.vim"]
-	path = vim/.vim/bundle/gundo.vim
-	url = git://github.com/sjl/gundo.vim.git
+    path = vim/.vim/bundle/gundo.vim
+    url = git://github.com/sjl/gundo.vim.git
 [submodule "vim/.vim/bundle/nerdtree"]
-	path = vim/.vim/bundle/nerdtree
-	url = git://github.com/scrooloose/nerdtree.git
+    path = vim/.vim/bundle/nerdtree
+    url = git://github.com/scrooloose/nerdtree.git
 [submodule "vim/.vim/bundle/numbers"]
-	path = vim/.vim/bundle/numbers
-	url = git://github.com/myusuf3/numbers.vim.git
+    path = vim/.vim/bundle/numbers
+    url = git://github.com/myusuf3/numbers.vim.git
 [submodule "vim/.vim/bundle/powerline"]
-	path = vim/.vim/bundle/powerline
-	url = git://github.com/Lokaltog/vim-powerline.git
+    path = vim/.vim/bundle/powerline
+    url = git://github.com/Lokaltog/vim-powerline.git
 [submodule "vim/.vim/bundle/rainbow_parentheses"]
-	path = vim/.vim/bundle/rainbow_parentheses
-	url = git://github.com/kien/rainbow_parentheses.vim.git
+    path = vim/.vim/bundle/rainbow_parentheses
+    url = git://github.com/kien/rainbow_parentheses.vim.git
 [submodule "vim/.vim/bundle/splice.vim"]
-	path = vim/.vim/bundle/splice.vim
-	url = git://github.com/sjl/splice.vim.git
+    path = vim/.vim/bundle/splice.vim
+    url = git://github.com/sjl/splice.vim.git
 [submodule "vim/.vim/bundle/vim-orgmode"]
-	path = vim/.vim/bundle/vim-orgmode
-	url = git://github.com/jceb/vim-orgmode.git
+    path = vim/.vim/bundle/vim-orgmode
+    url = git://github.com/jceb/vim-orgmode.git
 [submodule "vim/.vim/bundle/vim-rails"]
-	path = vim/.vim/bundle/vim-rails
-	url = git://github.com/tpope/vim-rails.git
+    path = vim/.vim/bundle/vim-rails
+    url = git://github.com/tpope/vim-rails.git
 [submodule "vim/.vim/bundle/vitality"]
-	path = vim/.vim/bundle/vitality
-	url = git://github.com/sjl/vitality.vim.git
+    path = vim/.vim/bundle/vitality
+    url = git://github.com/sjl/vitality.vim.git
 [submodule "oh-my-zsh"]
-	path = oh-my-zsh
-	url = git://github.com/sjl/oh-my-zsh.git
+    path = oh-my-zsh
+    url = git@github.com:pelletier/oh-my-zsh.git
 [submodule "wo"]
-	path = wo
-	url = git://github.com/pelletier/wo.git
+    path = wo
+    url = git://github.com/pelletier/wo.git
 [submodule "hg/hg-publishall"]
-	path = hg/hg-publishall
-	url = git://github.com/pelletier/hg_publishall.git
+    path = hg/hg-publishall
+    url = git://github.com/pelletier/hg_publishall.git
 [submodule "hg/hg-git"]
-	path = hg/hg-git
-	url = git://github.com/schacon/hg-git.git
+    path = hg/hg-git
+    url = git://github.com/schacon/hg-git.git
 [submodule "hg/hg-prompt"]
-	path = hg/hg-prompt
-	url = git://github.com/pelletier/hg-prompt.git
+    path = hg/hg-prompt
+    url = git://github.com/pelletier/hg-prompt.git
 [submodule "vim/.vim/vimclojure"]
-	path = vim/.vim/vimclojure
-	url = git://github.com/emezeske/vimclojure.git
+    path = vim/.vim/vimclojure
+    url = git://github.com/emezeske/vimclojure.git
 [submodule ".emacs.d/minor-modes/rhtml"]
-	path = .emacs.d/minor-modes/rhtml
-	url = git://github.com/eschulte/rhtml.git
+    path = .emacs.d/minor-modes/rhtml
+    url = git://github.com/eschulte/rhtml.git
 [submodule "vim/.vim/bundle/vim-coffee-script"]
-	path = vim/.vim/bundle/vim-coffe-script
+    path = vim/.vim/bundle/vim-coffe-script
     url = https://github.com/kchmck/vim-coffee-script.git
 [submodule "vim/.vim/bundle/handlebars"]
-	path = vim/.vim/bundle/handlebars
-	url = git://github.com/nono/vim-handlebars.git
+    path = vim/.vim/bundle/handlebars
+    url = git://github.com/nono/vim-handlebars.git
