@@ -30,6 +30,9 @@
 (key-chord-define-global "fg" 'iy-go-to-char)
 (key-chord-define-global "df" 'iy-go-to-char-backward)
 
+;; Use Y or N instead of Yes or No
+(fset 'yes-or-no-p 'y-or-n-p)
+
 ;; Hide splash
 (setq inhibit-startup-message t
       inhibit-startup-echo-area-message t)
@@ -42,7 +45,6 @@
 (load-theme 'tango-dark)
 
 ;; Setup backup files
-
 (setq make-backup-files t)
 (setq version-control t)
 (setq backup-directory-alist (quote ((".*" . "~/.emacs.tmp/backup"))))
@@ -101,3 +103,15 @@
       (append '(("CMakeLists\\.txt\\'" . cmake-mode)
 		("\\.cmake\\'" . cmake-mode))
 	      auto-mode-alist))
+
+;; Git
+(require 'git-commit-mode)
+(add-hook 'git-commit-mode-hook 'turn-on-flyspell)
+(add-hook 'git-commit-mode-hook (lambda () (toggle-save-place 0)))
+
+;; Handlebars
+(require 'handlebars-mode)
+(setq auto-mode-alist
+      (append '(("\\.hdbs\\'" . handlebars-mode))
+              auto-mode-alist))
+(setq handlebars-basic-offset 2)
