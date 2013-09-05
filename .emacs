@@ -115,3 +115,6 @@
       (append '(("\\.hdbs\\'" . handlebars-mode))
               auto-mode-alist))
 (setq handlebars-basic-offset 2)
+
+;; CSS
+(setq css-indent-offset 2)
