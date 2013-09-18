@@ -42,7 +42,8 @@
 (setq column-number-mode t)
 
 ;; Change theme
-(load-theme 'tango-dark)
+;(load-theme 'tango-dark)
+(load-theme 'mac-classic t)
 
 ;; Setup backup files
 (setq make-backup-files t)
@@ -68,8 +69,8 @@
       '((space-mark 32 [32])
 	(newline-mark 10 [172 10])))
 (setq whitespace-style (quote
-                        (face tabs spaces trailing lines newline empty
-                         space-mark tab-mark newline-mark)))
+                        (face tabs trailing lines newline empty
+                         tab-mark newline-mark)))
 (global-whitespace-mode 1)
 
 ;; Tabs are evil (sometimes)

@@ -71,3 +71,6 @@ setopt EXTENDED_HISTORY
 unsetopt SHARE_HISTORY
 
 #alias heroku logs='nocorrect heroku logs'
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
