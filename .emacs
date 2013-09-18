@@ -30,6 +30,11 @@
 (key-chord-define-global "fg" 'iy-go-to-char)
 (key-chord-define-global "df" 'iy-go-to-char-backward)
 
+;; Folding shortcuts
+(global-set-key (kbd "C-x SPC") 'hs-toggle-hiding)
+(global-set-key (kbd "C-x M-d") 'hs-show-all)
+(global-set-key (kbd "C-x M-x") 'hs-hide-all)
+
 ;; Use Y or N instead of Yes or No
 (fset 'yes-or-no-p 'y-or-n-p)
 
@@ -94,6 +99,8 @@
 
 ;; Javascript
 (setq js-indent-level 2)
+(add-hook 'js-mode-hook
+          (lambda () (hs-minor-mode t)))
 
 ;; Shell scripting
 (add-to-list 'auto-mode-alist '("\\.zsh$" . shell-script-mode))
