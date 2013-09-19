@@ -78,6 +78,11 @@
                          tab-mark newline-mark)))
 (global-whitespace-mode 1)
 
+;; Auto completion
+(require 'auto-complete)
+(setq ac-ignore-case nil)
+(setq ac-auto-start 2)
+
 ;; Tabs are evil (sometimes)
 (setq-default indent-tabs-mode nil)
 
