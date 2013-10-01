@@ -107,6 +107,9 @@
 (add-hook 'js-mode-hook
           (lambda () (hs-minor-mode t)))
 
+;; Coffee Script
+(setq coffee-tab-width 2)
+
 ;; Shell scripting
 (add-to-list 'auto-mode-alist '("\\.zsh$" . shell-script-mode))
 
@@ -131,3 +134,6 @@
 
 ;; CSS
 (setq css-indent-offset 2)
+
+;; Rails
+(require 'rinari)

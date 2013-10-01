@@ -71,7 +71,7 @@ alias nose='nosetests --with-doctest --rednose -s'
 alias fab='fab -c .fabrc'
 # }}}
 # Ruby / Rails {{{
-export RBENV_VERSION=2.0.0-p247
+#export RBENV_VERSION=2.0.0-p247
 cond_source "$HOME/.rvm/scripts/rvm"
 export RAILS_ENV="development"
 alias r='rails'

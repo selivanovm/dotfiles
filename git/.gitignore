@@ -51,3 +51,4 @@ myCipher
 node_modules
 .idea
 *.iml
+tmp
