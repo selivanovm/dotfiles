@@ -62,6 +62,10 @@
 (setq line-number-mode t)
 (setq column-number-mode t)
 
+;; Highlight matching parentheses
+(show-paren-mode 1)
+(setq show-paren-delay 0)
+
 ;; Change theme
 ;(load-theme 'tango-dark)
 (load-theme 'mac-classic t)
