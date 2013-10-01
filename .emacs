@@ -17,8 +17,8 @@
 
 ;; Load custom modes
 (setq load-path (cons (expand-file-name "~/.emacs.d/major")
-		      (cons (expand-file-name "~/.emacs.d/minor")
-			    load-path)))
+                      (cons (expand-file-name "~/.emacs.d/minor")
+                            load-path)))
 
 ;; Hide various bars
 (tool-bar-mode -1)
@@ -63,8 +63,8 @@
 (setq column-number-mode t)
 
 ;; Highlight matching parentheses
-(show-paren-mode 1)
 (setq show-paren-delay 0)
+(show-paren-mode 1)
 
 ;; Change theme
 ;(load-theme 'tango-dark)
@@ -92,7 +92,7 @@
 (require 'whitespace)
 (setq whitespace-display-mappings
       '((space-mark 32 [32])
-	(newline-mark 10 [172 10])))
+        (newline-mark 10 [172 10])))
 (setq whitespace-style (quote
                         (face tabs trailing lines newline empty
                          tab-mark newline-mark)))
