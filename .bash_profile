@@ -53,6 +53,7 @@ if command_exists mvim ; then
 else
     export EDITOR="vim"
 fi
+alias bim='vim'
 # }}}
 # Emacs {{{
 alias emacs='emacs -nw'
