@@ -4,6 +4,17 @@
              '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
 
+;; Helper to append a path to the exec path if it's not already in.
+(defun append-exec-path (path)
+  (unless (member path exec-path)
+    (progn
+      (setenv "PATH" (concat (getenv "PATH") ":" path))
+      (setq exec-path (append exec-path (list path))))
+    exec-path))
+
+;; Fix the PATH on OS X
+(append-exec-path "/usr/local/bin")
+
 ;; Load custom modes
 (setq load-path (cons (expand-file-name "~/.emacs.d/major")
 		      (cons (expand-file-name "~/.emacs.d/minor")
