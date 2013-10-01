@@ -42,6 +42,11 @@
 (setq inhibit-startup-message t
       inhibit-startup-echo-area-message t)
 
+;; Use only one frame
+;; This is useful when running a graphical version without the Emacs daemon
+;; support (i.e. OS X).
+(setq ns-pop-up-frames nil)
+
 ;; Display the column and line numbers
 (setq line-number-mode t)
 (setq column-number-mode t)

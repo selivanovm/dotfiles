@@ -41,3 +41,9 @@ trustExitCode = true
 
 [push]
 	default = current
+
+[credential]
+helper = /opt/boxen/bin/boxen-git-credential
+
+[hub]
+protocol = https
