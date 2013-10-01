@@ -93,9 +93,8 @@
 (setq whitespace-display-mappings
       '((space-mark 32 [32])
         (newline-mark 10 [172 10])))
-(setq whitespace-style (quote
-                        (face tabs trailing lines newline empty
-                         tab-mark newline-mark)))
+(setq whitespace-style
+      '(face tabs trailing lines-tail newline empty tab-mark newline-mark))
 (global-whitespace-mode 1)
 
 ;; Auto completion
