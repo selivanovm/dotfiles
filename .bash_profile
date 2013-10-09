@@ -105,6 +105,26 @@ if command_exists ksdiff; then
 else
     alias gd='git diff'
 fi
+function make_important {
+    local root="`git rev-parse --show-toplevel`"
+    if [ $? -eq 0 ]; then
+        local target="$root/.git/pre-push"
+        echo [ -f "$target" ]
+        if [ -f "$target" ]; then
+            read "Warning, $target already exists. Override? [y/n] " -n 1 -r
+            echo
+            if [[ ! $REPLY =~ ^[Yy]$ ]]
+            then
+                return 1
+            fi
+        fi
+        curl https://rawgithub.com/pelletier/6781626/raw/gistfile1.sh > "$target"
+        chmod +x "$target"
+        echo "Pre-push hook installed."
+    else
+        echo "No Git repository found here."
+    fi
+}
 # }}}
 # Mercurial {{{
 alias hc='hg commit'
@@ -195,4 +215,5 @@ export PATH="$HOME/src/emscripten/:$PATH"
 # }}}
 # Zendesk {{{
 alias zat='echo "http://thomas.zendesk.com" | zat'
+alias b='source /opt/boxen/env.sh'
 # }}}
