@@ -396,9 +396,7 @@ let NERDTreeDirArrows = 1
 " }}}
 " Powerline {{{
 if has('gui_running') || g:os == "osx"
-    let g:Powerline_symbols = 'fancy'
-else
-    let g:Powerline_symbols = 'compatible'
+    let g:airline_powerline_fonts = 1
 end
 " }}}
 " Rainbow Parentheses {{{
