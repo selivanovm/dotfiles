@@ -196,7 +196,7 @@ nnoremap <leader>l :BufExplorer<CR>
 noremap <leader>Q :q<CR>
 
 " Open file
-nnoremap <leader>o <C-w><C-v><C-l>:CommandT<CR>
+nnoremap <leader>o <C-w><C-v><C-l>:CtrlP<CR>
 
 " Remove the word under the cursor
 nnoremap <leader>d diw
@@ -370,9 +370,9 @@ inoremap []     []
 " }}}
 " Plugins ----------------------------------------------------------------- {{{
 
-" Command-T {{{
+" CtrlP {{{
 
-nnoremap <leader>t :CommandT<CR>
+nnoremap <leader>p :CtrlP<CR>
 set wildignore+=*.o,*.pyc
 set wildignore+=*.o,*.pyc,.git
 
@@ -517,7 +517,7 @@ autocmd FileType html set ft=htmldjango.html " For SnipMate
 
 " }}}
 " Javascript {{{
-autocmd FileType javascript set tw=80 
+autocmd FileType javascript set tw=80 sw=2 sts=2
 " }}}
 " Mercurial {{{
 

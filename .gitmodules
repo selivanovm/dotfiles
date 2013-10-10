@@ -1,9 +1,6 @@
 [submodule "vim/.vim/bundle/badwolf"]
     path = vim/.vim/bundle/badwolf
     url = git://github.com/sjl/badwolf.git
-[submodule "vim/.vim/bundle/command-t"]
-    path = vim/.vim/bundle/command-t
-    url = git://github.com/wincent/Command-T.git
 [submodule "vim/.vim/bundle/gundo.vim"]
     path = vim/.vim/bundle/gundo.vim
     url = git://github.com/sjl/gundo.vim.git
@@ -13,9 +10,6 @@
 [submodule "vim/.vim/bundle/numbers"]
     path = vim/.vim/bundle/numbers
     url = git://github.com/myusuf3/numbers.vim.git
-[submodule "vim/.vim/bundle/powerline"]
-    path = vim/.vim/bundle/powerline
-    url = git://github.com/Lokaltog/vim-powerline.git
 [submodule "vim/.vim/bundle/rainbow_parentheses"]
     path = vim/.vim/bundle/rainbow_parentheses
     url = git://github.com/kien/rainbow_parentheses.vim.git
@@ -61,3 +55,9 @@
 [submodule "vim/.vim/bundle/vim-airline"]
 	path = vim/.vim/bundle/vim-airline
 	url = https://github.com/bling/vim-airline
+[submodule "vim/.vim/bundle/ctrlp.vim"]
+	path = vim/.vim/bundle/ctrlp.vim
+	url = https://github.com/kien/ctrlp.vim.git
+[submodule "vim/.vim/bundle/delimitMate"]
+	path = vim/.vim/bundle/delimitMate
+	url = git@github.com:Raimondi/delimitMate.git
