@@ -196,17 +196,6 @@ fi
 # EPITA {{{
 alias soul='cd ~/netsoul && perl jogsoul.pl jogsoul.conf'
 
-if [[ "$platform" == "Linux" ]];
-then
-    export TERMINAL=xterm
-fi
-
-alias valgrind='valgrind --tool=memcheck --leak-check=yes --show-reachable=yes'
-
-if [[ "$platform" == "FreeBSD" ]];
-then
-    alias gdb='gdb --tui'
-fi
 alias z='zlock -immed'
 export PATH=/home/pellet_t/local/bin:$PATH
 # }}}
